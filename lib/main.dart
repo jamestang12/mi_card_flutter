@@ -11,8 +11,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(),
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child:  Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                backgroundImage:   AssetImage('images/personIcon.jpeg'),
+              ),
+              Text(
+                'John Doe',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
